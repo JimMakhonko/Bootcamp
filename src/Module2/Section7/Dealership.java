@@ -60,10 +60,9 @@ public class Dealership {
                     return i;
                 }
             }
-            System.out.println("\nYour search didn't match any results.\n");
-            return 404;
         }
-        return 0;
+        System.out.println("\nYour search didn't match any results.\n");
+        return 404;
     }
 
     public String toString() {
