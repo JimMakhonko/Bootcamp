@@ -26,23 +26,24 @@ public class Dealership {
         this.cars[index].drive();
         this.cars[index] = null;
     }
+
     /**
      * Function name: search
      *
-     * @param make (String)
+     * @param make   (String)
      * @param budget (int)
      * @return (int)
-     *
+     * <p>
      * Inside the function:
-     *   1. Loops through every element in the cars field.
-     *   2. Skips the run if the element is null.
-     *   3. If it finds a car the user wants and can afford:
-     *     - println: \nWe found a car in spot <i> \n\n <toString>
-     *     - print: If you're interested, type 'yes':
-     *     - returns the index
-     *   4. If the loop runs and it didn't find a car <------
-     *     - println: \nYour search didn't match any results.\n
-     *     - returns 404
+     * 1. Loops through every element in the cars field.
+     * 2. Skips the run if the element is null.
+     * 3. If it finds a car the user wants and can afford:
+     * - println: \nWe found a car in spot <i> \n\n <toString>
+     * - print: If you're interested, type 'yes':
+     * - returns the index
+     * 4. If the loop runs and it didn't find a car <------
+     * - println: \nYour search didn't match any results.\n
+     * - returns 404
      */
 
 
@@ -52,14 +53,9 @@ public class Dealership {
             if (this.cars[i].getMake().equals(make) && this.cars[i].getPrice() <= budget) {
                 System.out.println("\nWe found a car in spot " + i + "\n\n" + this.cars[i].toString());
                 System.out.println("if you're interested type 'yes'");
-
-                String answer = scanner.nextLine();
-                if (answer.equals("yes"))
-                    sell(i);
             } else {
                 System.out.println("\nYour search didn't match any results.\n");
-                System.out.println("Feel free to browse through our collection of cars.\\n");
-                return i;
+                return 404;
             }
         }
         return 0;
