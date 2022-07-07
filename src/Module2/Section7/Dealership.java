@@ -48,15 +48,18 @@ public class Dealership {
 
 
     public int search(String make, int budget) {
+        String userAnswer = scanner.nextLine();
         for (int i = 0; i < cars.length; i++) {
 
-            if (this.cars[i].getMake().equals(make) && this.cars[i].getPrice() <= budget) {
-                System.out.println("\nWe found a car in spot " + i + "\n\n" + this.cars[i].toString());
-                System.out.println("if you're interested type 'yes'");
-                return i;
-            } else {
+            if (!(this.cars[i].getMake().equals(make) && this.cars[i].getPrice() <= budget)) {
                 System.out.println("\nYour search didn't match any results.\n");
                 return 404;
+            } else {
+                System.out.println("\nWe found a car in spot " + i + "\n\n" + this.cars[i].toString());
+                System.out.println("if you're interested type 'yes'");
+                if(userAnswer.equals("yes")){
+                    return i;
+                }
             }
         }
         return 0;
