@@ -46,7 +46,6 @@ public class Dealership {
      * - returns 404
      */
 
-
     public int search(String make, int budget) {
 
         for (int i = 0; i < cars.length; i++) {
