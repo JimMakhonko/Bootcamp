@@ -53,6 +53,7 @@ public class Dealership {
             if (this.cars[i].getMake().equals(make) && this.cars[i].getPrice() <= budget) {
                 System.out.println("\nWe found a car in spot " + i + "\n\n" + this.cars[i].toString());
                 System.out.println("if you're interested type 'yes'");
+                return i;
             } else {
                 System.out.println("\nYour search didn't match any results.\n");
                 return 404;
