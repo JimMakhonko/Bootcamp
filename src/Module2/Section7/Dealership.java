@@ -59,10 +59,9 @@ public class Dealership {
                     System.out.println(cars[i]);
                     return i;
                 }
-            } else {
-                System.out.println("\nYour search didn't match any results.\n");
-                return 404;
             }
+            System.out.println("\nYour search didn't match any results.\n");
+            return 404;
         }
         return 0;
     }
