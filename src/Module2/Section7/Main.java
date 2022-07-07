@@ -26,7 +26,7 @@ public class Main {
         if (result == 404) {
             System.out.println("Feel free to browse through our collection of cars.\n");
             System.out.print(dealership);
-        }else{
+        } else {
             dealership.sell(result);
         }
     }
