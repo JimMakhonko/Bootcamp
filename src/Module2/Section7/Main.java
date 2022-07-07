@@ -17,12 +17,12 @@ public class Main {
         };
         System.out.println("\n ****** JAVA DEALERSHIP! ****** \n");
         System.out.print("Welcome! Enter the type of car you're looking for: ");
-        String userChoice = scanner.nextLine();
+        String make = scanner.nextLine();
         System.out.print("Enter your budget: ");
-        int usersBudget = scanner.nextInt();
+        int budget = scanner.nextInt();
 
         Dealership dealership = new Dealership(cars);
-        int result = dealership.search(userChoice, usersBudget);
+        int result = dealership.search(make, budget);
         if (result == 404) {
             System.out.println("Feel free to browse through our collection of cars.\n");
             System.out.print(dealership);

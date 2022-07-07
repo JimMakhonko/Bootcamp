@@ -49,12 +49,13 @@ public class Dealership {
     public int search(String make, int budget) {
 
         for (int i = 0; i < cars.length; i++) {
-
-            if (this.cars[i].getMake().equals(make) && this.cars[i].getPrice() <= budget) {
+            if (this.cars[i] == null) {
+                continue;
+            }else if (this.cars[i].getMake().equals(make) && this.cars[i].getPrice() <= budget) {
                 System.out.println("\nWe found a car in spot " + i + "\n\n" + this.cars[i].toString());
                 System.out.println("if you're interested type 'yes'");
                 String userAnswer = scanner.nextLine();
-                if(userAnswer.equals("yes")){
+                if (userAnswer.equals("yes")) {
                     return i;
                 }
             }
