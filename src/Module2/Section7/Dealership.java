@@ -56,7 +56,7 @@ public class Dealership {
                 System.out.println("if you're interested type 'yes'");
                 String userAnswer = scanner.nextLine();
                 if(userAnswer.equals("yes")){
-                    System.out.println(cars[i]);
+                    System.out.println("Sold" + cars[i]);
                     return i;
                 }
             }
